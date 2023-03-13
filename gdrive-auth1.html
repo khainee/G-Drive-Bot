@@ -94,6 +94,12 @@
     var url = window.location.href;
     var code = url.split("?code=")[1].split("&")[0];
     document.getElementById("myCode").textContent = code;
+    var copyBtn = document.querySelector('.copy-btn');
+    var copyTextarea = document.querySelector('.copy-textarea');
+    copyBtn.addEventListener('click', function(event) {
+      copyTextarea.select();
+      document.execCommand('copy');
+    });
   </script>
  </body>
 </html>
